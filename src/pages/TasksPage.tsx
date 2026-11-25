@@ -87,11 +87,11 @@ function KanbanCard({ t, onDragStart }: { t: Task; onDragStart: () => void }) {
         onClick={() => navigate(`/tasks/${t.key}`)}
         style={{ marginBottom: 8, borderLeft: `4px solid ${borderColor}` }}
       >
-        <Flex justify="space-between" align="center">
-          <Typography.Text type="secondary" style={{ fontSize: 12 }}>
+        <Flex justify="space-between" align="center" wrap gap={4}>
+          <Typography.Text type="secondary" style={{ fontSize: 12, whiteSpace: 'nowrap' }}>
             {t.key}
           </Typography.Text>
-          <Space size={4}>
+          <Space size={4} wrap>
             {t.risk !== 'none' && <Tag color={riskMeta[t.risk].color}>{riskMeta[t.risk].label}</Tag>}
             <Tag color={priorityMeta[t.priority].color} style={{ marginInlineEnd: 0 }}>
               {priorityMeta[t.priority].label}
