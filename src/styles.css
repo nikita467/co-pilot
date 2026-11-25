@@ -1,0 +1,8 @@
+html, body, #root { margin: 0; min-height: 100%; }
+.cp-drop-zone { transition: background .15s, outline-color .15s; outline: 2px dashed transparent; outline-offset: -2px; }
+.cp-drop-zone.is-over { outline-color: #1677ff; }
+.cp-draggable { cursor: grab; }
+.cp-draggable:active { cursor: grabbing; }
+.cp-pre { white-space: pre-wrap; margin: 0; }
+.cp-graph-node { cursor: pointer; }
+.cp-graph-node:hover rect { filter: brightness(1.05); }
